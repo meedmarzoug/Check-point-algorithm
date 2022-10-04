@@ -1,0 +1,19 @@
+ALGORITHM sort_card
+VAR
+    tab: array of INTEGER;
+    n,i,j:INTEGER;
+BEGIN
+n=length(tab);
+REPEAT
+    write ('give me the card number');
+    read (x);
+UNTIL ((x>0) and (x<=13))  \\en considerant que la carte peut prendre la valeur de 1 jusqua 10 le valet 11 la dame 12 le roi 13\\
+for (i=0; i<n-1; i++)
+   if ((tab[i]<x) and (tab[i+1]>x)) then \\en considerant que le tableau est deja trié\\
+    n+=1;
+     for (j=n-1; j>i; j--)
+      tab[j+1]=tab[j];
+    end for;
+   end if;
+end for;    
+END

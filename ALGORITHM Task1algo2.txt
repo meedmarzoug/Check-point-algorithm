@@ -1,0 +1,24 @@
+FUNCTION dot_product (var vect1, vect2) : FLOAT
+VAR
+    FLOAT PS;
+BEGIN
+    PS=1;
+    PS=(vect1[0]*vect2[0])+(vect1[1]*vect2[1]);
+    RETURN PS ;
+END
+
+
+
+ALGORITHM Dot product
+VAR
+v1,v2:array of FLOAT;
+ x1,x2,y1,y2,ps: FLOAT;
+BEGIN
+    ps=1;
+    v1=[x1,y1];
+    v2=[x2,y2];
+ps=dot_product(v1,v2);
+if (ps=0) then 
+  write(v1 'et' v2 'are orthogonals' ); 
+end if;
+END
